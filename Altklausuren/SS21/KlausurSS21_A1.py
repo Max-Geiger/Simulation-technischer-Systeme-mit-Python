@@ -22,6 +22,9 @@ F = df[1]
 def Funktion(x,a,b):
     return x/a*np.abs(np.tanh(x/b))
 
+
+
+
 popt,pcov =op.curve_fit(Funktion,x,F)
 
 
@@ -40,5 +43,6 @@ plt.show()
 
 # Speichern der optimalen Daten in einer Textdatei
 infile = open('Curve_Fitting.txt','w')
-infile.write(str(popt))
+for i in range(2):
+    infile.write(str(popt[i])+'\n')
 infile.close()

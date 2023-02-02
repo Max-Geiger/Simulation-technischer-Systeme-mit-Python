@@ -1,7 +1,7 @@
 #Imports:
 import numpy as np
 import matplotlib.pyplot as plt
-#import pandas as pd
+import pandas as pd
 #import scipy.optimize as op
 from scipy.integrate import solve_ivp
 from scipy.integrate import odeint
@@ -14,18 +14,19 @@ from KlausurSS21_A1 import Funktion
 
 
 # Einlesen der neuen Dateien
+a=[]
 infile = open('Curve_Fitting.txt','r')
-for line in infile:
-    a =  line
+for line in infile.readlines():
+    a.append(float(line))
     #print(line)
 infile.close()
-afloat = np.asarray(a, dtype = np.float64)
-print(a)
+#print(a,a[0],a[1])
+
 
 
 # Parameterdefinition
 c1 = 1
-c2 = 0.1
+c2 = a[0]
 b1 = 0.01
 b2 = 0.05
 m1 = 3
