@@ -64,3 +64,28 @@ elif x == 'hindi':
     print('Abhinandan')     
 else:
     print('Sprache nicht enhalten :(')
+
+#Aufgabe 3.3
+
+x = int(input('welche zahl Rätst du?'))
+y = 10
+
+if x<y:
+    print('Zahl zu klein')
+elif x>y:
+    print('Zahl zu groß')
+else:
+    print('richtig geraten')
+
+#Aufgabe 4.1
+x=[0,1,2,3,4,5,6,7,8,9,10]
+for i in range(len(x)):
+    print(x[i])
+
+#Aufgabe 4.2
+x=[]
+
+for i in range(11):
+    x.append(i)
+
+print(x)
