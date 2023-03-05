@@ -2,7 +2,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-Link = '/Users/maxgeiger/Documents/Simulation-technischer-Systeme-mit-Python/Klausurvorbereitung/Altklausuren/F15_10.DAT'
+Link = '/Users/maxgeiger/Documents/Simulation-technischer-Systeme-mit-Python/Klausurvorbereitung/Altklausuren/SS22/F15_10.DAT'
 df = np.genfromtxt(Link,skip_header=3)
 dfx = df[0:37,0]
 dfy_o = df[0:37,1]
