@@ -49,9 +49,9 @@ plt.tight_layout(pad=0.5) #subplotabstände
 
 #Aufgabenteil c
 
-Startemperratur = np.linspace(270,350,9)
+Startemperratur = np.arange(270,360,10)
 t_ausgehärtet=[]
-#print(Startemperratur)
+print(Startemperratur)
 for T in Startemperratur:
     sol1 = solve_ivp(funk,t_span=(0,300),y0=[0.01,Startemperratur[T]],method='RK23')
     for i in range(len(sol1.y[0,:])):
