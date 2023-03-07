@@ -23,7 +23,7 @@ class Impfpass:
             wert= True
         elif self._genesen==True:
             wert=True
-        elif self._getestet<datetime.timedelta(hours=24):
+        elif self._getestet > datetime.datetime.now() - datetime.timedelta(hours=24):
             wert=True
         else:
             wert=False
@@ -31,7 +31,12 @@ class Impfpass:
         return wert
 
 Person1 = Impfpass()
-Person1._set_geimpft
-#Person1.einlass_erlaubt
 
-print(Person1.einlass_erlaubt())
+print(f'Der Enlass von Person1 ist gestattet (True) bzw. untersagt(False):{Person1.einlass_erlaubt()}.')
+
+
+Person1._set_geimpft()
+#Person1._set_genesen()
+#Person1.einlass_erlaubt
+print(f'Der Enlass von Person1 ist gestattet (True) bzw. untersagt(False):{Person1.einlass_erlaubt()}.')
+
