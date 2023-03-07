@@ -31,7 +31,7 @@ def u2t(t):
 def bewegungsgleichung_weqpper(ut):
     def bewegungsgleichung(t,y):
         y1p = y[1]
-        y2p = -(d1+d2)/m1*y[1] + d2/m1*y[3] - (c1+c2+c3)/m1*y[0] + (c2+c3)*y[2] + ut*c1
+        y2p = -(d1+d2)/m1*y[1] + d2/m1*y[3] - (c1+c2+c3)/m1*y[0] + (c2+c3)/m1*y[2] + ut*c1
         y3p = y[3]
         y4p = d2/m2*y[1] - d2/m2*y[3] + (c2+c3)/m2*y[0] - (c2+c3)/m2*y[2]
         return [y1p,y2p,y3p,y4p]
