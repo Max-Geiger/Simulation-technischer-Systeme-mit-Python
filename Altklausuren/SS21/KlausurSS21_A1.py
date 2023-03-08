@@ -1,5 +1,6 @@
 #Imports:
 import numpy as np
+import os
 import matplotlib.pyplot as plt
 import pandas as pd
 import scipy.optimize as op
@@ -8,10 +9,19 @@ from scipy.integrate import solve_ivp
 #from math import *
 #from openpyxl import load_workbook
 
+<<<<<<< Updated upstream
 #nutzen von Pandas zum Einlesen der Datei
 columns = ["Weg", "Kraft"]
 filepath = '/Users/maxgeiger/Documents/Simulation-technischer-Systeme-mit-Python/Altklausuren/SS21/federkennlinie_klausur.csv'
 df = pd.read_csv(filepath, sep=' ', delimiter=None, header=None)#, usecols=columns) 
+=======
+#nutzen von Pandas
+filepath = r'G:\Meine Ablage\Studium\Master\3. Semester\Simulation technischer Systeme mit Python\Altklasuren\SS21'
+#os.listdir()
+df = pd.read_excel(filepath) 
+#print(df)
+#df.to_dict()
+>>>>>>> Stashed changes
 
 # Speichern der Werte
 x = df[0]
